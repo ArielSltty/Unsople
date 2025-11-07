@@ -366,7 +366,7 @@ co2_saved = weight × 6.0 kg_CO₂/kg = 0.09 kg CO₂
 <div align="center">
 
 #### Quantization Benchmark
-![Quantization Benchmark](results/unsople_quantization_benchmark (1).png)
+![Quantization Benchmark](results/unsople_quantization_benchmark.png)
 
 *Performance comparison between base and quantized models*
 
@@ -589,4 +589,5 @@ For support, questions, or collaborations:
 
 
 *"Every sorted waste item is a step towards a sustainable future"*
+
 
