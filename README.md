@@ -140,7 +140,7 @@ Unsople acts as an "intelligent waste bin assistant" that:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/unsople.git
+git clone https://github.com/ArielSltty/Unsople.git
 cd unsople
 
 # 2. Create virtual environment (recommended)
@@ -589,5 +589,6 @@ For support, questions, or collaborations:
 
 
 *"Every sorted waste item is a step towards a sustainable future"*
+
 
 
