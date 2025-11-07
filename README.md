@@ -366,7 +366,7 @@ co2_saved = weight × 6.0 kg_CO₂/kg = 0.09 kg CO₂
 <div align="center">
 
 #### Quantization Benchmark
-![Quantization Benchmark](results/unsople_quantization_benchmark.png)
+![Quantization Benchmark](results/unsople_quantization_benchmark (1).png)
 
 *Performance comparison between base and quantized models*
 
@@ -580,14 +580,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support & Contact
 
 For support, questions, or collaborations:
-- 📧 Email: your-email@domain.com
-- 💬 Issues: [GitHub Issues](https://github.com/your-username/unsople/issues)
-- 🐦 Twitter: [@unsople_ai](https://twitter.com/unsople_ai)
+- 📧 Email: arielsltty@gmail.com
+- 💬 Issues: [GitHub Issues](https://github.com/ArielSltty/Unsople/issues)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ for a cleaner planet**
 
 *"Every sorted waste item is a step towards a sustainable future"*
+
