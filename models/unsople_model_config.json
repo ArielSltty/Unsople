@@ -1,0 +1,51 @@
+{
+  "model_name": "Unsople Waste Classifier",
+  "version": "1.0.0",
+  "description": "AI-powered waste classification for smart sorting system",
+  "classes": {
+    "0": "battery",
+    "1": "biological",
+    "2": "brown-glass",
+    "3": "cardboard",
+    "4": "clothes",
+    "5": "green-glass",
+    "6": "metal",
+    "7": "paper",
+    "8": "plastic",
+    "9": "shoes",
+    "10": "trash",
+    "11": "white-glass"
+  },
+  "class_to_idx": {
+    "battery": 0,
+    "biological": 1,
+    "brown-glass": 2,
+    "cardboard": 3,
+    "clothes": 4,
+    "green-glass": 5,
+    "metal": 6,
+    "paper": 7,
+    "plastic": 8,
+    "shoes": 9,
+    "trash": 10,
+    "white-glass": 11
+  },
+  "input_size": [
+    224,
+    224
+  ],
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "training_accuracy": 96.03609410248147,
+  "export_date": "2025-11-07T06:25:08.593648",
+  "framework": "PyTorch",
+  "onnx_opset": 12
+}

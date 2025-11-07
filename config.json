@@ -1,0 +1,182 @@
+{
+  "unsople_config": {
+    "version": "1.0.0",
+    "description": "Unsople - AI-Powered Smart Sorting System Configuration",
+    "last_updated": "2024-01-15",
+    "environment": "production"
+  },
+
+  "model": {
+    "path": "models/unsople_waste_classifier.onnx",
+    "config_path": "models/unsople_model_config.json",
+    "quantized_path": "models/unsople_waste_classifier_quantized.onnx",
+    "confidence_threshold": 0.6,
+    "input_size": [224, 224],
+    "mean": [0.485, 0.456, 0.406],
+    "std": [0.229, 0.224, 0.225],
+    "prefer_quantized": true,
+    "providers": ["CPUExecutionProvider"]
+  },
+
+  "camera": {
+    "id": 0,
+    "width": 640,
+    "height": 480,
+    "fps": 30,
+    "auto_exposure": true,
+    "auto_white_balance": true,
+    "flip_horizontal": false,
+    "flip_vertical": false,
+    "rotation": 0,
+    "brightness": 50,
+    "contrast": 50
+  },
+
+  "processing": {
+    "auto_orient": true,
+    "maintain_aspect_ratio": true,
+    "padding_color": [114, 114, 114],
+    "resize_method": "lanczos",
+    "enable_preprocessing": true,
+    "enable_postprocessing": true,
+    "batch_size": 1,
+    "max_queue_size": 10
+  },
+
+  "waste_categories": {
+    "plastic": {
+      "name": "Plastic",
+      "bin_color": "yellow",
+      "co2_savings_per_kg": 6.0,
+      "average_weight_kg": 0.015,
+      "examples": ["bottle", "container", "wrapper", "bag"]
+    },
+    "paper": {
+      "name": "Paper",
+      "bin_color": "blue",
+      "co2_savings_per_kg": 3.5,
+      "average_weight_kg": 0.050,
+      "examples": ["newspaper", "cardboard", "office_paper", "box"]
+    },
+    "organic": {
+      "name": "Organic",
+      "bin_color": "green", 
+      "co2_savings_per_kg": 1.4,
+      "average_weight_kg": 0.120,
+      "examples": ["food_waste", "fruit", "vegetable", "compost"]
+    },
+    "metal": {
+      "name": "Metal",
+      "bin_color": "gray",
+      "co2_savings_per_kg": 9.0,
+      "average_weight_kg": 0.015,
+      "examples": ["can", "foil", "container", "utensils"]
+    },
+    "glass": {
+      "name": "Glass",
+      "bin_color": "brown",
+      "co2_savings_per_kg": 0.3,
+      "average_weight_kg": 0.300,
+      "examples": ["bottle", "jar", "container", "broken_glass"]
+    }
+  },
+
+  "impact_calculation": {
+    "enabled": true,
+    "use_dynamic_weights": true,
+    "default_weight_kg": 0.015,
+    "conservative_estimates": true,
+    "include_methane_factor": true,
+    "environmental_equivalents": {
+      "tree_absorption_kg_co2_per_year": 21.77,
+      "car_emissions_kg_co2_per_km": 0.12,
+      "smartphone_charges_per_kg_co2": 1200,
+      "lightbulb_hours_per_kg_co2": 100
+    }
+  },
+
+  "display": {
+    "window_name": "Unsople - AI Waste Classification",
+    "show_confidence": true,
+    "show_co2_impact": true,
+    "show_bin_recommendation": true,
+    "font_scale": 0.6,
+    "font_color": [255, 255, 255],
+    "background_color": [0, 0, 0],
+    "highlight_color": [0, 255, 0],
+    "warning_color": [0, 0, 255],
+    "show_fps": true,
+    "show_timestamp": true
+  },
+
+  "output": {
+    "results_directory": "results",
+    "save_detected_images": true,
+    "save_video_output": false,
+    "image_quality": 95,
+    "auto_create_directories": true,
+    "max_image_files": 1000,
+    "cleanup_old_days": 7,
+    "compression_level": 6
+  },
+
+  "logging": {
+    "level": "INFO",
+    "file_enabled": true,
+    "console_enabled": true,
+    "max_file_size_mb": 10,
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "date_format": "%Y-%m-%d %H:%M:%S"
+  },
+
+  "performance": {
+    "inference_threads": 4,
+    "inter_op_threads": 2,
+    "enable_optimizations": true,
+    "memory_limit_mb": 1024,
+    "enable_memory_monitoring": true,
+    "gpu_acceleration": false,
+    "graph_optimization_level": "ENABLE_ALL"
+  },
+
+  "keyboard_shortcuts": {
+    "quit": "q",
+    "save_image": "s",
+    "toggle_camera": "c",
+    "toggle_display": "d",
+    "reload_model": "r",
+    "pause_resume": "p",
+    "capture_sequence": "space"
+  },
+
+  "raspberry_pi": {
+    "optimized": true,
+    "camera_module": false,
+    "gpio_enabled": false,
+    "led_pin": 18,
+    "buzzer_pin": 23,
+    "low_power_mode": true,
+    "thermal_throttling_check": true
+  },
+
+  "reporting": {
+    "auto_save_reports": true,
+    "daily_summary": true,
+    "generate_visualizations": true,
+    "report_format": "csv",
+    "backup_enabled": true,
+    "backup_directory": "backups",
+    "email_reports": false,
+    "webhook_url": ""
+  },
+
+  "simulation": {
+    "test_mode": false,
+    "mock_camera": false,
+    "test_image_directory": "test_images",
+    "performance_benchmark_iterations": 100,
+    "stress_test_duration_seconds": 300,
+    "generate_test_reports": true
+  }
+}

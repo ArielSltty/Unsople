@@ -1,0 +1,40 @@
+{
+  "unsople_config": {
+    "version": "1.0.0-pi",
+    "description": "Unsople - Raspberry Pi Optimized Configuration",
+    "environment": "raspberry_pi"
+  },
+
+  "model": {
+    "path": "models/unsople_waste_classifier_quantized.onnx",
+    "confidence_threshold": 0.5,
+    "prefer_quantized": true,
+    "providers": ["CPUExecutionProvider"],
+    "input_size": [224, 224]
+  },
+
+  "camera": {
+    "id": 0,
+    "width": 320,
+    "height": 240,
+    "fps": 15,
+    "auto_exposure": true
+  },
+
+  "performance": {
+    "inference_threads": 2,
+    "inter_op_threads": 1,
+    "enable_optimizations": true,
+    "memory_limit_mb": 512,
+    "low_power_mode": true
+  },
+
+  "raspberry_pi": {
+    "optimized": true,
+    "camera_module": true,
+    "gpio_enabled": true,
+    "led_pin": 18,
+    "buzzer_pin": 23,
+    "low_power_mode": true
+  }
+}
