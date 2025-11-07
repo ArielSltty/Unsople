@@ -4,8 +4,6 @@
 
 *"UNderStand – SOrt – recycLE"*
 
-![Unsople Banner](https://via.placeholder.com/800x200/2E86AB/FFFFFF?text=Unsople+-+AI+Waste+Classification+System)
-
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![ONNX Runtime](https://img.shields.io/badge/ONNX-Runtime-green.svg)](https://onnxruntime.ai/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.5%2B-orange.svg)](https://opencv.org/)
@@ -154,32 +152,54 @@ pip install -r requirements.txt
 
 # 4. Download pre-trained models (if not included)
 # Models are already included in the models/ directory
-Raspberry Pi Specific Installation
-bash
+```
+
+### Raspberry Pi Specific Installation
+
+```bash
 # For Raspberry Pi, use the optimized requirements
 pip install -r requirements-pi.txt
 
 # Enable camera interface
 sudo raspi-config
 # Navigate to Interface Options → Camera → Enable
-🚀 Quick Start
-Real-time Classification with Webcam
-bash
+```
+
+## 🚀 Quick Start
+
+### Real-time Classification with Webcam
+
+```bash
 python run_unsople.py --realtime
-Single Image Classification
-bash
+```
+
+### Single Image Classification
+
+```bash
 python run_unsople.py --image samples/plastic_bottle.jpg
-Batch Testing
-bash
+```
+
+### Batch Testing
+
+```bash
 python run_unsople.py --batch-test test_images/ --output reports/
-Performance Benchmark
-bash
+```
+
+### Performance Benchmark
+
+```bash
 python run_unsople.py --performance --iterations 200
-System Status Check
-bash
+```
+
+### System Status Check
+
+```bash
 python run_unsople.py --status
-📁 Project Structure
-text
+```
+
+## 📁 Project Structure
+
+```
 Unsople/
 ├── 📁 src/                          # Source code
 │   ├── inference.py                 # Real-time camera inference
@@ -200,53 +220,190 @@ Unsople/
 ├── requirements.txt                 # Python dependencies
 ├── run_unsople.py                   # Main application entry point
 └── README.md                        # This file
-🧠 AI Model Details
-Model Architecture
-<table> <tr> <th>Component</th> <th>Specification</th> <th>Details</th> </tr> <tr> <td>🔄 Base Model</td> <td>MobileNetV2</td> <td>Lightweight CNN architecture</td> </tr> <tr> <td>🎯 Input Size</td> <td>224×224×3</td> <td>RGB image input</td> </tr> <tr> <td>📊 Output Classes</td> <td>5</td> <td>plastic, paper, organic, metal, glass</td> </tr> <tr> <td>⚙️ Framework</td> <td>ONNX Runtime</td> <td>CPU-optimized inference</td> </tr> <tr> <td>📈 Training Data</td> <td>Garbage Classification</td> <td>~15,000 images</td> </tr> </table>
-Waste Categories Supported
-<table> <tr> <th>Category</th> <th>Bin Color</th> <th>CO₂ Savings/kg</th> <th>Examples</th> </tr> <tr> <td>🧴 Plastic</td> <td>Yellow</td> <td>6.0 kg CO₂</td> <td>bottles, containers, wrappers</td> </tr> <tr> <td>📄 Paper</td> <td>Blue</td> <td>3.5 kg CO₂</td> <td>newspaper, cardboard, office paper</td> </tr> <tr> <td>🍎 Organic</td> <td>Green</td> <td>1.4 kg CO₂</td> <td>food waste, fruits, vegetables</td> </tr> <tr> <td>🥫 Metal</td> <td>Gray</td> <td>9.0 kg CO₂</td> <td>cans, foil, containers</td> </tr> <tr> <td>🍶 Glass</td> <td>Brown</td> <td>0.3 kg CO₂</td> <td>bottles, jars, containers</td> </tr> </table>
-🌱 Environmental Impact
-CO₂ Savings Calculation
+```
+
+## 🧠 AI Model Details
+
+### Model Architecture
+
+<table>
+<tr>
+    <th>Component</th>
+    <th>Specification</th>
+    <th>Details</th>
+</tr>
+<tr>
+    <td>🔄 Base Model</td>
+    <td>MobileNetV2</td>
+    <td>Lightweight CNN architecture</td>
+</tr>
+<tr>
+    <td>🎯 Input Size</td>
+    <td>224×224×3</td>
+    <td>RGB image input</td>
+</tr>
+<tr>
+    <td>📊 Output Classes</td>
+    <td>5</td>
+    <td>plastic, paper, organic, metal, glass</td>
+</tr>
+<tr>
+    <td>⚙️ Framework</td>
+    <td>ONNX Runtime</td>
+    <td>CPU-optimized inference</td>
+</tr>
+<tr>
+    <td>📈 Training Data</td>
+    <td>Garbage Classification</td>
+    <td>~15,000 images</td>
+</tr>
+</table>
+
+### Waste Categories Supported
+
+<table>
+<tr>
+    <th>Category</th>
+    <th>Bin Color</th>
+    <th>CO₂ Savings/kg</th>
+    <th>Examples</th>
+</tr>
+<tr>
+    <td>🧴 Plastic</td>
+    <td>Yellow</td>
+    <td>6.0 kg CO₂</td>
+    <td>bottles, containers, wrappers</td>
+</tr>
+<tr>
+    <td>📄 Paper</td>
+    <td>Blue</td>
+    <td>3.5 kg CO₂</td>
+    <td>newspaper, cardboard, office paper</td>
+</tr>
+<tr>
+    <td>🍎 Organic</td>
+    <td>Green</td>
+    <td>1.4 kg CO₂</td>
+    <td>food waste, fruits, vegetables</td>
+</tr>
+<tr>
+    <td>🥫 Metal</td>
+    <td>Gray</td>
+    <td>9.0 kg CO₂</td>
+    <td>cans, foil, containers</td>
+</tr>
+<tr>
+    <td>🍶 Glass</td>
+    <td>Brown</td>
+    <td>0.3 kg CO₂</td>
+    <td>bottles, jars, containers</td>
+</tr>
+</table>
+
+## 🌱 Environmental Impact
+
+### CO₂ Savings Calculation
+
 Unsople calculates environmental impact based on scientific research:
 
-python
+```python
 # Example calculation for plastic bottle
 weight = 0.015 kg  # Average plastic bottle
 co2_saved = weight × 6.0 kg_CO₂/kg = 0.09 kg CO₂
-Environmental Equivalents
-<table> <tr> <th>Equivalent</th> <th>Calculation</th> <th>Example</th> </tr> <tr> <td>🌳 Trees</td> <td>1 kg CO₂ = 0.046 trees/year</td> <td>0.09 kg CO₂ = ~4 trees for one day</td> </tr> <tr> <td>🚗 Car Emissions</td> <td>1 kg CO₂ = 8.33 km driving</td> <td>0.09 kg CO₂ = ~0.75 km not driven</td> </tr> <tr> <td>📱 Smartphone Charges</td> <td>1 kg CO₂ = 1,200 charges</td> <td>0.09 kg CO₂ = ~108 charges</td> </tr> </table>
-📈 Results & Visualizations
-Training Performance
-<div align="center">
-Training History
-https://results/unsople_training_history.png
+```
 
-Model convergence during training showing training and validation accuracy/loss
+### Environmental Equivalents
+
+<table>
+<tr>
+    <th>Equivalent</th>
+    <th>Calculation</th>
+    <th>Example</th>
+</tr>
+<tr>
+    <td>🌳 Trees</td>
+    <td>1 kg CO₂ = 0.046 trees/year</td>
+    <td>0.09 kg CO₂ = ~4 trees for one day</td>
+</tr>
+<tr>
+    <td>🚗 Car Emissions</td>
+    <td>1 kg CO₂ = 8.33 km driving</td>
+    <td>0.09 kg CO₂ = ~0.75 km not driven</td>
+</tr>
+<tr>
+    <td>📱 Smartphone Charges</td>
+    <td>1 kg CO₂ = 1,200 charges</td>
+    <td>0.09 kg CO₂ = ~108 charges</td>
+</tr>
+</table>
+
+## 📈 Results & Visualizations
+
+### Training Performance
+
+<div align="center">
+
+#### Training History
+![Training History](results/unsople_training_history.png)
+
+*Model convergence during training showing training and validation accuracy/loss*
 
 </div>
-Model Evaluation
-<div align="center">
-Confusion Matrix
-https://results/unsople_confusion_matrix.png
 
-Confusion matrix showing classification performance across all waste categories
+### Model Evaluation
+
+<div align="center">
+
+#### Confusion Matrix
+![Confusion Matrix](results/unsople_confusion_matrix.png)
+
+*Confusion matrix showing classification performance across all waste categories*
 
 </div>
-Quantization Benefits
-<div align="center">
-Quantization Benchmark
-https://results/unsople_quantization_benchmark.png
 
-Performance comparison between base and quantized models
+### Quantization Benefits
+
+<div align="center">
+
+#### Quantization Benchmark
+![Quantization Benchmark](results/unsople_quantization_benchmark.png)
+
+*Performance comparison between base and quantized models*
 
 </div>
-Key Insights from Results:
-<table> <tr> <th>Visualization</th> <th>Key Insight</th> <th>Impact</th> </tr> <tr> <td>Training History</td> <td>Model achieved 99.55% validation accuracy with stable convergence</td> <td>✅ High reliability in real-world scenarios</td> </tr> <tr> <td>Confusion Matrix</td> <td>Excellent diagonal dominance with minimal misclassifications</td> <td>🎯 Precise waste categorization</td> </tr> <tr> <td>Quantization Benchmark</td> <td>73.6% size reduction with maintained accuracy</td> <td>🚀 Optimized for edge deployment</td> </tr> </table>
-🔧 Configuration
-Main Configuration File (config.json)
-Unsople is highly configurable through the config.json file:
 
-json
+### Key Insights from Results:
+
+<table>
+<tr>
+    <th>Visualization</th>
+    <th>Key Insight</th>
+    <th>Impact</th>
+</tr>
+<tr>
+    <td>Training History</td>
+    <td>Model achieved 99.55% validation accuracy with stable convergence</td>
+    <td>✅ High reliability in real-world scenarios</td>
+</tr>
+<tr>
+    <td>Confusion Matrix</td>
+    <td>Excellent diagonal dominance with minimal misclassifications</td>
+    <td>🎯 Precise waste categorization</td>
+</tr>
+<tr>
+    <td>Quantization Benchmark</td>
+    <td>73.6% size reduction with maintained accuracy</td>
+    <td>🚀 Optimized for edge deployment</td>
+</tr>
+</table>
+
+## 🔧 Configuration
+
+### Main Configuration File (`config.json`)
+
+Unsople is highly configurable through the `config.json` file:
+
+```json
 {
   "model": {
     "path": "models/unsople_waste_classifier.onnx",
@@ -264,11 +421,43 @@ json
     "use_dynamic_weights": true
   }
 }
-Key Configuration Sections
-<table> <tr> <th>Section</th> <th>Parameters</th> <th>Description</th> </tr> <tr> <td>🤖 Model</td> <td>path, confidence_threshold, input_size</td> <td>AI model settings and inference parameters</td> </tr> <tr> <td>🎥 Camera</td> <td>id, resolution, fps, rotation</td> <td>Camera hardware configuration</td> </tr> <tr> <td>🌱 Impact</td> <td>enabled, dynamic_weights, equivalents</td> <td>Environmental impact calculation settings</td> </tr> <tr> <td>📊 Output</td> <td>save_images, video_output, reporting</td> <td>Data logging and output preferences</td> </tr> </table>
-🎮 Usage Examples
-Real-time Detection Session
-bash
+```
+
+### Key Configuration Sections
+
+<table>
+<tr>
+    <th>Section</th>
+    <th>Parameters</th>
+    <th>Description</th>
+</tr>
+<tr>
+    <td>🤖 Model</td>
+    <td>path, confidence_threshold, input_size</td>
+    <td>AI model settings and inference parameters</td>
+</tr>
+<tr>
+    <td>🎥 Camera</td>
+    <td>id, resolution, fps, rotation</td>
+    <td>Camera hardware configuration</td>
+</tr>
+<tr>
+    <td>🌱 Impact</td>
+    <td>enabled, dynamic_weights, equivalents</td>
+    <td>Environmental impact calculation settings</td>
+</tr>
+<tr>
+    <td>📊 Output</td>
+    <td>save_images, video_output, reporting</td>
+    <td>Data logging and output preferences</td>
+</tr>
+</table>
+
+## 🎮 Usage Examples
+
+### Real-time Detection Session
+
+```bash
 $ python run_unsople.py --realtime --camera 0 --save-video
 
 🚀 Starting Unsople Real-time Classification...
@@ -283,8 +472,11 @@ $ python run_unsople.py --realtime --camera 0 --save-video
 [SCAN] Paper container detected (0.88 confidence)  
 🌱 CO₂ Saved: 0.18 kg | Total: 1.53 kg
 🗑️ Recommendation: BLUE bin (Recycling)
-Single Image Analysis
-bash
+```
+
+### Single Image Analysis
+
+```bash
 $ python run_unsople.py --image test_images/metal_can.jpg
 
 📷 Processing: test_images/metal_can.jpg
@@ -294,9 +486,13 @@ $ python run_unsople.py --image test_images/metal_can.jpg
    🌱 CO₂ Saved: 0.14 kg
    🗑️ Bin: GRAY bin (Recycling)
    💡 Equivalent: 12.5 km of car emissions avoided
-🔍 Testing & Validation
-Comprehensive Test Suite
-bash
+```
+
+## 🔍 Testing & Validation
+
+### Comprehensive Test Suite
+
+```bash
 # Run accuracy test
 python run_unsople.py --accuracy dataset/ --labels labels.json
 
@@ -305,13 +501,45 @@ python run_unsople.py --performance --iterations 500
 
 # Stress test
 python run_unsople.py --stress --duration 600
-Test Results Summary
-<table> <tr> <th>Test Type</th> <th>Metrics</th> <th>Results</th> </tr> <tr> <td>🎯 Accuracy Test</td> <td>Overall Accuracy, Per-class Precision</td> <td>99.55% overall, >98% per-class</td> </tr> <tr> <td>⚡ Performance Test</td> <td>Inference Time, FPS, Memory Usage</td> <td>5.42 ms avg, 184 FPS, <100MB RAM</td> </tr> <tr> <td>💥 Stress Test</td> <td>Stability, Memory Leaks, Error Rate</td> <td>0% crash rate, stable memory usage</td> </tr> <tr> <td>🔧 Compatibility Test</td> <td>Raspberry Pi, Various Cameras</td> <td>✅ Full compatibility achieved</td> </tr> </table>
-🤝 Contributing
+```
+
+### Test Results Summary
+
+<table>
+<tr>
+    <th>Test Type</th>
+    <th>Metrics</th>
+    <th>Results</th>
+</tr>
+<tr>
+    <td>🎯 Accuracy Test</td>
+    <td>Overall Accuracy, Per-class Precision</td>
+    <td>99.55% overall, >98% per-class</td>
+</tr>
+<tr>
+    <td>⚡ Performance Test</td>
+    <td>Inference Time, FPS, Memory Usage</td>
+    <td>5.42 ms avg, 184 FPS, <100MB RAM</td>
+</tr>
+<tr>
+    <td>💥 Stress Test</td>
+    <td>Stability, Memory Leaks, Error Rate</td>
+    <td>0% crash rate, stable memory usage</td>
+</tr>
+<tr>
+    <td>🔧 Compatibility Test</td>
+    <td>Raspberry Pi, Various Cameras</td>
+    <td>✅ Full compatibility achieved</td>
+</tr>
+</table>
+
+## 🤝 Contributing
+
 We welcome contributions to Unsople! Here's how you can help:
 
-Development Setup
-bash
+### Development Setup
+
+```bash
 # 1. Fork the repository
 # 2. Clone your fork
 git clone https://github.com/your-username/unsople.git
@@ -326,47 +554,40 @@ pip install -r requirements-dev.txt
 python run_unsople.py --performance
 
 # 6. Submit pull request
-Areas for Contribution
-🔍 New waste categories
+```
 
-🌍 Additional environmental metrics
+### Areas for Contribution
 
-📱 Mobile application integration
+- 🔍 New waste categories
+- 🌍 Additional environmental metrics
+- 📱 Mobile application integration
+- 🔌 Hardware integrations
+- 📊 Advanced analytics
+- 🎨 UI/UX improvements
 
-🔌 Hardware integrations
+## 📄 License
 
-📊 Advanced analytics
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-🎨 UI/UX improvements
+## 🙏 Acknowledgments
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+- **Dataset**: Garbage Classification Dataset from Kaggle
+- **Model Architecture**: MobileNetV2
+- **Inference Engine**: ONNX Runtime
+- **Computer Vision**: OpenCV
+- **Environmental Data**: EPA, World Bank research
 
-🙏 Acknowledgments
-Dataset: Garbage Classification Dataset from Kaggle
+## 📞 Support & Contact
 
-Model Architecture: MobileNetV2
-
-Inference Engine: ONNX Runtime
-
-Computer Vision: OpenCV
-
-Environmental Data: EPA, World Bank research
-
-📞 Support & Contact
 For support, questions, or collaborations:
+- 📧 Email: your-email@domain.com
+- 💬 Issues: [GitHub Issues](https://github.com/your-username/unsople/issues)
+- 🐦 Twitter: [@unsople_ai](https://twitter.com/unsople_ai)
 
-📧 Email: your-email@domain.com
-
-💬 Issues: GitHub Issues
-
-🐦 Twitter: @unsople_ai
+---
 
 <div align="center">
-Made with ❤️ for a cleaner planet
 
-"Every sorted waste item is a step towards a sustainable future"
+**Made with ❤️ for a cleaner planet**
 
-https://via.placeholder.com/600x100/27AE60/FFFFFF?text=%F0%9F%8C%B1+Together+we+can+make+a+difference+%F0%9F%8C%B1
-
-</div> ```
+*"Every sorted waste item is a step towards a sustainable future"*
